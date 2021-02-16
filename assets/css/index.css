@@ -1,0 +1,200 @@
+#warning {
+    position        : fixed;
+    transform       : translateX(-50%) translateY(-50%);
+    top             : calc(100% - 3.2em);
+    left            : 50%;
+    background-color: var(--color2opacity5);
+    color           : var(--colorWhite);
+    height          : 7em;
+    width           : 100%;
+    z-index         : 1000;
+    display         : flex;
+    align-items     : center;
+}
+
+#warning p {
+    width     : 70%;
+    text-align: center;
+    margin    : auto;
+    font-size : 1.2em;
+}
+
+#warning p a {
+    color          : var(--colorWhite);
+    text-decoration: underline;
+    font-size      : 1.2em;
+}
+
+#logoLandingPage {
+    max-width : 60vw;
+    max-height: 60vh;
+    position  : absolute;
+    z-index   : 100;
+    transform : translateX(-50%) translateY(-50%);
+    top       : 40%;
+    left      : 50%;
+}
+
+#landingPage1 {
+    min-height: 100vh;
+    padding   : 0;
+}
+
+.carouselContainer {
+    min-height: 100vh;
+}
+
+.arrowIndexWidth {
+    width: 30%;
+}
+
+#landingPage2,
+#landingPage4 {
+    min-height: 100vh;
+}
+
+#landingPage4 {
+    padding-bottom: 2em;
+    min-height    : calc(100vh - 4em);
+}
+
+#landingPage3 {
+    background: var(--color1opacity2);
+}
+
+#whoWeAreContainer {
+    max-width    : 65vw;
+    margin-bottom: 2em;
+    margin-left  : auto;
+    margin-right : auto;
+    border       : var(--color1opacity4) 1.5vh solid;
+}
+
+#whoWeAreText {
+    margin: 5vh auto 5vh 0;
+}
+
+
+
+#imgWhoWeAre1 {
+    max-width    : 40em;
+    max-height   : 35em;
+    width        : auto;
+    position     : relative;
+    left         : -5vw;
+    top          : 5vh;
+    margin-bottom: 10vh;
+    padding      : 0;
+}
+
+#journey {
+    max-width: 90vw;
+    height   : 100%;
+}
+
+#experience {
+    margin-top: 5em;
+    max-width : 75vw;
+}
+
+#imgRoom1,
+#imgExperience1,
+#imgExperience2 {
+    overflow: hidden;
+    padding : 0px;
+    border  : 2px solid var(--color1);
+    position: relative;
+}
+
+#imgRoom2 img {
+    border-left  : 2px solid var(--color1);
+    border-top   : 2px solid var(--color1);
+    border-bottom: 2px solid var(--color1);
+}
+
+#imgRoom3 img {
+    border-right : 2px solid var(--color1);
+    border-top   : 2px solid var(--color1);
+    border-bottom: 2px solid var(--color1);
+}
+
+#imgRoom1 {
+    max-height: 35em;
+    position  : relative;
+}
+
+#imgRoom2 {
+    max-height: 35em;
+
+}
+
+#imgRoom3 {
+    max-height: 35em;
+}
+
+#imgRoom2 img {
+    position: absolute;
+    width   : 100%;
+    bottom  : 5%;
+
+}
+
+#imgRoom3 img {
+    max-height: 35em;
+    position  : absolute;
+    width     : 100%;
+    top       : 5%;
+    left      : 0;
+}
+
+#imgExperience1,
+#imgExperience2 {
+    max-height: 25em;
+}
+
+#lineUpRoom1 {
+    height  : 6em;
+    width   : 1px;
+    position: absolute;
+    left    : 50%;
+    top     : -4.5em;
+    z-index : 80;
+}
+
+#linkRoomContainer {
+    padding : 2em 0;
+    position: relative;
+}
+
+#landingPage1 .container {
+    max-width: 100%;
+    padding  : 0;
+}
+
+.indexBgImg1,
+.indexBgImg2,
+.indexBgImg3,
+.indexBgImg4 {
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+    height                 : 100vh;
+    position               : relative;
+}
+
+.indexBgImg1 {
+    background: url("../img/who-we-are/whoweare07.jpg") no-repeat center;
+}
+
+.indexBgImg2 {
+    background: url("../img/who-we-are/hall01.jpg") no-repeat center;
+}
+
+.indexBgImg3 {
+    background: url("../img/who-we-are/whoweare05.jpg") no-repeat center;
+}
+
+.indexBgImg4 {
+    background: url("../img/restaurant/restaurant11.jpg") no-repeat center;
+}

@@ -1,0 +1,30 @@
+@media (max-width: 1200px){
+    .mb-4vh {
+        margin-bottom: 4vh;
+    }
+    #imgWhoWeAre1 {
+        position: static!important;
+        margin-bottom   : 5vh;
+        overflow: hidden;
+        padding: 0;
+    }
+    #whoWeAreContainer {
+        max-width: 95vw;
+        border   : none;
+    }
+    #whoWeAreText {
+        text-align: center;
+        margin    : 0 auto 1vh auto;
+    }
+    .carteDescription{
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }  
+    .containerPresta, .containerPayment{
+        margin: auto;
+        height: 100%;
+    }
+    .containerPayment{
+        margin-top: 2em;
+    }
+}

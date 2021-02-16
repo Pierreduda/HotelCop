@@ -1,0 +1,376 @@
+body {
+  position: relative;
+}
+
+body:before {
+  position          : absolute;
+  content           : "";
+  z-index           : 1000;
+  top               : 0;
+  left              : 0;
+  right             : 0;
+  bottom            : 0;
+  background-color  : rgba(0, 0, 0, 0.5);
+  opacity           : 0;
+  visibility        : hidden;
+  -webkit-transition: .3s all ease-in-out;
+  -o-transition     : .3s all ease-in-out;
+  transition        : .3s all ease-in-out;
+}
+
+body.show-sidebar:before {
+  opacity   : 1;
+  visibility: visible;
+}
+a{
+  color: var(--colorWhite);
+}
+
+/* Navbar && Sidebar */
+.navbar {
+  background-color: var(--color1);
+  height          : 3.3em;
+  padding         : 0;
+  box-shadow      : 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#navbarSupportedContent {
+  background-color: var(--color1);
+}
+
+.side-inner .container-fluid .row span,
+nav #navbarSupportedContent .container-fluid .row span {
+  border-bottom: 3px solid var(--colorWhite);
+  margin-bottom: 2%;
+}
+
+.side-inner,
+nav {
+  color: var(--colorWhite);
+}
+
+.side-inner a,
+nav .navbar-collapse a:not(.nav-link):not(.dropdown-item) {
+  padding        : 10px 0 10px 0;
+  font-size      : 1.5rem;
+  text-decoration: none;
+  color          : var(--colorWhite);
+}
+
+.side-inner a:hover,
+nav .navbar-collapse a:hover {
+  text-decoration : none;
+  background-color: rgba(255, 255, 255, 0.39);
+}
+
+a.reserveNav {
+  margin-top: 1em;
+  padding   : 10px 30px 10px 30px !important;
+  border    : solid var(--colorWhite) 1px;
+}
+
+#logoNavBar {
+  padding   : 3px;
+  left      : 0;
+  right     : 0;
+  width     : auto;
+  max-width : 100%;
+  max-height: 3em;
+  margin    : auto;
+}
+
+aside {
+  height    : 100vh;
+  min-height: 580px;
+}
+
+.scroll {
+  overflow-y    : scroll !important;
+  height        : 100vh;
+  padding-bottom: 4em;
+  position      : relative;
+}
+
+#navbar {
+  height: 100%;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+aside {
+  width             : 350px;
+  left              : 0;
+  z-index           : 1200;
+  position          : fixed;
+  -webkit-transform : translateX(-100%);
+  -ms-transform     : translateX(-100%);
+  transform         : translateX(-100%);
+  background-color  : var(--color2);
+  -webkit-transition: 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
+  transition        : 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition     : 1s transform cubic-bezier(0.23, 1, 0.32, 1);
+  transition        : 1s transform cubic-bezier(0.23, 1, 0.32, 1);
+  transition        : 1s transform cubic-bezier(0.23, 1, 0.32, 1), 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.show-sidebar aside {
+  -webkit-transform: translateX(0%);
+  -ms-transform    : translateX(0%);
+  transform        : translateX(0%);
+}
+
+aside .toggle {
+  padding-left     : 30px;
+  padding-top      : 11px;
+  position         : absolute;
+  right            : 0;
+  -webkit-transform: translateX(100%);
+  -ms-transform    : translateX(100%);
+  transform        : translateX(100%);
+}
+
+.show-sidebar aside {
+  -webkit-box-shadow: 10px 0 30px 0 rgba(0, 0, 0, 0.1);
+  box-shadow        : 10px 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+aside .side-inner {
+  padding                   : 20px 0;
+  height                    : 100vh;
+  overflow-y                : hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Burger */
+.burger {
+  width   : 28px;
+  height  : 32px;
+  cursor  : pointer;
+  position: relative;
+  z-index : 99;
+  float   : right;
+}
+
+.burger:before,
+.burger span,
+.burger:after {
+  width        : 100%;
+  height       : 2px;
+  display      : block;
+  background   : white;
+  border-radius: 2px;
+  position     : absolute;
+  opacity      : 1;
+}
+
+.burger:before,
+.burger:after {
+  -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  transition        : top 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  -o-transition     : top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
+  transition        : top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
+  transition        : top 0.35s cubic-bezier(0.23, 1, 0.32, 1), transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition: top 0.35s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 1.15s cubic-bezier(0.86, 0, 0.07, 1);
+  content           : "";
+}
+
+.burger:before {
+  top: 4px;
+}
+
+.burger span {
+  top: 15px;
+}
+
+.burger:after {
+  top: 26px;
+}
+
+/* Hover */
+.burger:hover:before {
+  top: 7px;
+}
+
+.burger:hover:after {
+  top: 23px;
+}
+
+/* Click */
+.burger.active span {
+  opacity: 0;
+}
+
+.burger.active:before,
+.burger.active:after {
+  top: 40%;
+}
+
+.burger.active:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  filter           : progid:DXImageTransform.Microsoft.BasicImage(rotation=5);
+  /*for IE*/
+}
+
+.burger.active:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  filter           : progid:DXImageTransform.Microsoft.BasicImage(rotation=-5);
+  /*for IE*/
+}
+
+.burger:focus {
+  outline: none;
+}
+
+.panier {
+  -webkit-filter: invert(1);
+  filter        : invert(1);
+  padding       : 7px;
+  opacity       : 0.8;
+}
+
+.lienPanier {
+  width: 55px;
+}
+
+.navbar-light .navbar-toggler {
+  color         : rgba(0, 0, 0, 0) !important;
+  border-color  : rgba(0, 0, 0, 0) !important;
+  -webkit-filter: invert(1);
+  filter        : invert(1);
+}
+
+.searching {
+  padding-top   : 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+
+.searching input[type=search] {
+  width        : 250px;
+  height       : 2.3rem;
+  box-sizing   : border-box;
+  border-radius: 13px;
+  background   : var(--color1);
+  font-size    : 17px;
+  transition   : all 0.5s;
+  border       : 1px solid var(--colorWhiteOpacity5);
+
+}
+
+.scroll .search {
+  text-align: center;
+  width     : 100%;
+}
+
+.scroll .gSearch {
+  width: 40%!important;
+}
+
+.searching input[type=search]:hover {
+  background: rgba(221, 215, 215, 0.5);
+}
+
+.searching input::placeholder {
+  text-align  : center;
+  color       : var(--colorWhite);
+  padding-left: .5rem;
+}
+
+.searching input:focus {
+  outline: none;
+}
+
+.newsletterNavSubmit {
+  width           : 2rem;
+  height          : 2rem;
+  box-sizing      : border-box;
+  border-radius   : 7px;
+  border          : 0;
+  font-size       : 17px;
+  transition      : all 0.5s;
+  color           : var(--colorWhite);
+  background-image: url("../img/icon/search.png");
+  background-size : cover;
+  background-color: var(--color1);
+}
+
+.newsletterNavSubmit:hover {
+  background-color: var(--colorWhiteOpacity5);
+}
+
+.dropdown-menu {
+  padding         : 0;
+  min-width       : 40px;
+  background-color: var(--color1);
+  color           : var(--colorWhite);
+  border-left     : white 1px solid;
+  border-right    : white 1px solid;
+  border-bottom   : white 1px solid;
+  border-top      : white 0 solid;
+  margin-top      : -.8em;
+  border-radius   : 0 0 5px 5px;
+  text-align      : center;
+}
+
+.dropdown-item {
+  padding: .25rem 0;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--color2);
+  color           : var(--colorWhite);
+}
+
+.dropdown-menu a {
+  color: var(--colorWhite);
+}
+
+.nav-link {
+  padding: .2rem 0;
+}
+
+.dropdown-toggle {
+  text-align     : center;
+  width          : 40px;
+  text-decoration: none;
+  color          : var(--colorWhite);
+  border         : white 1px solid;
+  border-radius  : 5px 5px 5px 5px;
+  margin         : 0 1rem 0 0;
+}
+
+.dropdown-toggle:hover {
+  color: var(--colorWhite);
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown {
+  margin-left: 1rem;
+  margin-top : .65rem;
+}
+
+.scroll .nav-item.dropdown {
+  position: absolute;
+  top     : 0%;
+  right   : 5%;
+}
+
+.scroll .dropdown-menu {
+  margin-top: -.2em;
+}
+
+@media (max-width: 992px) {
+
+  #toggle-btn,
+  nav .flex-row-reverse .search,
+  #navbarDropdownMenuLink {
+    display: none;
+  }
+}

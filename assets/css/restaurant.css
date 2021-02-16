@@ -1,0 +1,58 @@
+.sectionTitle {
+    margin-bottom: 1em;
+}
+
+.sectionSize {
+    margin-bottom: 5em;
+}
+
+#restaurantOverview {
+    background             : url("../img/restaurant/restaurant01.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size   : cover;
+    -o-background-size     : cover;
+    background-size        : cover;
+    height: 76vh;
+    color: var(--colorWhite);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px var(--color2);
+}
+
+#restaurantOverview p {
+    width: 70%;
+    margin: auto;
+}
+
+#restaurantGamme h4{
+    margin-bottom: 0em;
+}
+
+.linkRestaurant {
+    color    : var(--color1);
+    font-size: 1.3em;
+}
+
+.linkRestaurant:hover {
+    color: var(--color1);
+}
+
+.linkRestaurantContainer {
+    margin-top: 1em;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+.carteDescription {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+}
+/* @media (max-width: 576px){
+   
+} */
